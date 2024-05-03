@@ -1,0 +1,147 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "testDocument : Document" as testDoc {
+characters
+propertiesFactory
+
+}
+object "arial-black-16 : CharacterProperties" as ab16{
+font = "arial"
+color = "black"
+size = 16
+}
+object "arial-black-14 : CharacterProperties" as ab14{
+font = "arial"
+color = "black"
+size = 14
+}
+object "verdana-blue-18 : CharacterProperties" as vb18{
+font = "verdana"
+color = "blue"
+size = 18
+}
+object "verdana-red-12 : CharacterProperties" as vr12{
+font = "verdana"
+color = "red"
+size = 12
+}
+
+
+object "testDocument.propertiesFactory: CharacterPropertiesFactory" as propFact {
+flyweights = "{
+ "arial16black" : arial-black-16,
+ "arial14black" : arial-black-14,
+ "verdana18blue" : verdana-blue-18,
+ "verdana12red" : verdana-red-12"
+ }"
+}
+
+object "testDocument.characters[0] : Character" as char0{
+character = "H"
+characterProperty = arial-black-16
+}
+object "testDocument.characters[1] : Character" as char1{
+character = "e"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[2] : Character" as char2{
+character = "l"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[3] : Character" as char3{
+character = "l"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[4] : Character" as char4{
+character = "o"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[5] : Character" as char5{
+character = "W"
+characterProperty = arial-black-16
+}
+object "testDocument.characters[6] : Character" as char6{
+character = "o"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[7] : Character" as char7{
+character = "r"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[8] : Character" as char8{
+character = "l"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[9] : Character" as char9{
+character = "d"
+characterProperty =arial-black-14
+}
+object "testDocument.characters[10] : Character" as char10{
+character = "C"
+characterProperty = verdana-blue-18
+}
+object "testDocument.characters[11] : Character" as char11{
+character = "S"
+characterProperty =verdana-blue-18
+}
+object "testDocument.characters[12] : Character" as char12{
+character = "5"
+characterProperty = verdana-red-12
+}
+object "testDocument.characters[13] : Character" as char13{
+character = "8"
+characterProperty = verdana-red-12
+}
+object "testDocument.characters[14] : Character" as char14{
+character = "0"
+characterProperty = verdana-red-12
+}
+object "testDocument.characters[15] : Character" as char15{
+character = "0"
+characterProperty = verdana-red-12
+}
+
+
+ab16 --o propFact
+ab14 --o propFact
+vr12 --o propFact
+vb18 --o propFact
+propFact --* testDoc
+ab16 --o char0
+ab16 --o char5
+ab14 --o char1
+ab14 --o char2
+ab14 --o char3
+ab14 --o char4
+ab14 --o char6
+ab14 --o char7
+ab14 --o char8
+ab14 --o char9
+vb18 --o char10
+vb18 --o char11
+vr12 --o char12
+vr12 --o char13
+vr12 --o char14
+vr12 --o char15
+char0 --o testDoc
+char1 --o testDoc
+char2 --o testDoc
+char3 --o testDoc
+char4 --o testDoc
+char5 --o testDoc
+char6 --o testDoc
+char7 --o testDoc
+char8 --o testDoc
+char9 --o testDoc
+char10 --o testDoc
+char11 --o testDoc
+char12 --o testDoc
+char13 --o testDoc
+char14 --o testDoc
+char15 --o testDoc
+
+left to right direction
+
+
+@enduml
