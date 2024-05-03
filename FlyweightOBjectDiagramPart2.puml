@@ -130,22 +130,22 @@ vr12 --o char12
 vr12 --o char13
 vr12 --o char14
 vr12 --o char15
-char0 --o testDoc
-char1 --o testDoc
-char2 --o testDoc
-char3 --o testDoc
-char4 --o testDoc
-char5 --o testDoc
-char6 --o testDoc
-char7 --o testDoc
-char8 --o testDoc
-char9 --o testDoc
-char10 --o testDoc
-char11 --o testDoc
-char12 --o testDoc
-char13 --o testDoc
-char14 --o testDoc
-char15 --o testDoc
+char0 --* testDoc
+char1 --* testDoc
+char2 --* testDoc
+char3 --* testDoc
+char4 --* testDoc
+char5 --* testDoc
+char6 --* testDoc
+char7 --* testDoc
+char8 --* testDoc
+char9 --* testDoc
+char10 --* testDoc
+char11 --* testDoc
+char12 --* testDoc
+char13 --* testDoc
+char14 --* testDoc
+char15 --* testDoc
 
 
 left to right direction
